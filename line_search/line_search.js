@@ -10,7 +10,7 @@ function search(){
 }
 
 function button_str(url_index){
-    submit_button =  '<a href="javascript:ekikara_submit(' + url_index + ')">Submit</a>';
+    submit_button =  '<a href="javascript:ekikara_submit(\'' + url_index + '\')">Submit</a>';
     show_button = '<a href="http://ekikara.jp/newdata/line/' + url_index + '/down1_1.htm" target="blank">Show</a>';
     return submit_button + " " + show_button
 }
