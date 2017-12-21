@@ -308,8 +308,7 @@ document.ontouchstart = function(e){
     y_prev = y_first;
     x_now = x_first;
     y_now = y_first;
-    alert(x_now);
-    body_position_touchstart = current.position;
+    body_position_touchstart = {x: current.position.x, y: current.position.y};
 }
 
 document.ontouchmove = function(e){
