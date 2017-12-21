@@ -312,6 +312,9 @@ document.ontouchstart = function(e){
 }
 
 document.ontouchmove = function(e){
+    world_width = render.bounds.max.x - render.bounds.min.x;
+    canvas_width = render.options.width;
+    canvas_left = canvas.getBoundingClientRect().left;
     if (game_state != 0){ return; }
     e.preventDefault();
     x_prev = x_now;
@@ -319,7 +322,7 @@ document.ontouchmove = function(e){
     x_now = e.changedTouches[0].pageX;
     y_now = e.changedTouches[0].pageY;
     if (Math.abs(x_now - x_prev) > Math.abs(y_now - y_prev)){//45度線と比べて横方向に動いている
-        Body.setPosition(current, Vector.add(body_position_touchstart, Vector.create(x_now - x_first, 0)));
+        Body.setPosition(current, Vector.add(body_position_touchstart, Vector.create((x_now - x_first) * world_width / canvas_width, 0)));
     }
 }
 
