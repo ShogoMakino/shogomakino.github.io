@@ -300,7 +300,7 @@ function changeKeyState(key, val){
 //上方向：回転
 //下方向：落下
 document.ontouchstart = function(e){
-    if (state != 1){ return; }
+    if (game_state != 1){ return; }
     e.preventDefault();
     x_first = e.changedTouches[0].pageX;
     y_first = e.changedTouches[0].pageY;
@@ -312,7 +312,7 @@ document.ontouchstart = function(e){
 }
 
 document.ontouchmove = function(e){
-    if (state != 1){ return; }
+    if (game_state != 1){ return; }
     e.preventDefault();
     x_prev = x_now;
     y_prev = y_now;
@@ -324,7 +324,7 @@ document.ontouchmove = function(e){
 }
 
 document.ontouchend = function(e){
-    if (state != 1){ return; }
+    if (game_state != 1){ return; }
     x_now = e.changedTouches[0].pageX;
     y_now = e.changedTouches[0].pageY;
     if (Math.abs(y_now - y_first) > Math.abs(x_now - x_first)){//45度線と比べて縦方向に動いた
