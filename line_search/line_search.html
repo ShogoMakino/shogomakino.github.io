@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 
   <head>
@@ -15,16 +16,41 @@
         <option value="">平日</option>
         <option value="_sat">土曜</option>
         <option value="_holi">日祝</option>
-      </select><br>
-      Table Index: <input class="textfield" type="text" name="processTables" value="1"><br>
-      Reverse: <input type="checkbox" name="reverse" value="true"><br>
-      Start Time: <input class="textfield" type="text" name="startTime" maxlength="4" value="0300"><br>
+      </select><br />
+      Table Index: <input class="textfield" type="text" name="processTables" value="1"><br />
+      Reverse: <input type="checkbox" name="reverse" value="true"><br />
+      Start Time: <input class="textfield" type="text" name="startTime" maxlength="4" value="0300"><br />
     </form>
     <form name="f">
+      Search Word:<br />
       <input type="text" name="line">
-      <input type="button" value="search" onclick="search()">
+      <input type="button" value="Search" onclick="search(this.form.line.value)" autofocus="true">
     </form>
-    <div id="result"></div>
+    <div id="result_title">検索結果</div>
+    <div id="result" style="min-height:5em;"></div>
+    <div id="about_contents" style="margin-top:1em;">
+      本サイトはRyo UMETSUさんが製作された「えきから to OuDia」を路線名から検索して利用するためのwrapperです。<br />
+      えきから時刻表の路線名とふりがなを検索し、Search Wordで中間一致検索します。(検索例は下に記載)<br />
+      その他の項目についてはえきから to OuDiaと同様です。<br />
+      Searchボタンをクリックすると路線一覧とともにSubmit, Showのリンクが表示されます。<br />
+      Submitをクリックするとえきから to OuDiaにポストを送信し.oudファイルをダウンロードします。<br />
+      Showをクリックするとえきから時刻表のその路線の(平日下りの)ページを開きます。<br />
+
+
+      <br />
+      検索例)東海道新幹線(<a href="http://ekikara.jp/newdata/state/line/13.htm">http://ekikara.jp/newdata/state/line/13.htm</a>の一番上)の場合<br />
+      被検索ワードが<br />
+      ----------<br />
+      [ＪＲ]東海道新幹線(東京～新大阪)<br />
+      [じぇいあーる]とうかいどうしんかんせん<br />
+      ----------<br />
+      なので、「JR」「東海道」「東京」「しんかんせん」等の検索ワードでヒットします。<br />
+
+      <br /><br /><br />
+      えきから to OuDiaは<a href="http://ekikara2oudia.appspot.com/">こちら</a><br />
+      えきから時刻表は<a href="http://www.ekikara.jp/top.htm">こちら</a><br />
+    </div>
+
   </body>
 
 </html>
