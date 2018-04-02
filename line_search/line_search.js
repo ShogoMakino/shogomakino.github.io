@@ -5,7 +5,11 @@ function search(search_text){
             show_str += "<li>" + button_str(line_data[i][0]) + line_data[i][1] + "</li>";
         }
     }
-    document.getElementById("result").innerHTML = show_str;
+    if(show_str.length){
+        document.getElementById("result").innerHTML = show_str;
+    }else{
+        document.getElementById("result").innerHTML = "「" + search_text + "」に一致する路線は見つかりませんでした。";
+    }
 }
 
 function button_str(url_index){
