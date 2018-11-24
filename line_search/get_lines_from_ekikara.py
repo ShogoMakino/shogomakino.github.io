@@ -1,5 +1,5 @@
 # coding: shift-jis
-#! /usr/bin/env python
+#! /usr/bin/env python3
 
 import requests
 import lxml.html
