@@ -1,5 +1,5 @@
-# coding: shift-jis
 #! /usr/bin/env python3
+# coding: shift-jis
 
 import requests
 import lxml.html
@@ -32,7 +32,7 @@ def write_js_file(line_dict):
     f = open('line_data.js', 'w')
     f.write('line_data = [')
     first_flag = True
-    for elem in line_dict.items():
+    for elem in sorted(line_dict.items(), key=lambda x: x[0]):
         if not first_flag:
             f.write(',')
         url_index=elem[0]
