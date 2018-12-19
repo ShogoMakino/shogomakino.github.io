@@ -34,10 +34,11 @@ def write_js_file(line_dict):
     first_flag = True
     for elem in line_dict.items():
         if not first_flag:
-            f.write(', ')
+            f.write(',')
         url_index=elem[0]
         line_name=elem[1][0]
         line_reading=elem[1][1]
+        f.write('\n')
         line_str = "['%s', '%s', '%s']" % (url_index, line_name, line_reading)
         f.write(line_str)
         first_flag = False
