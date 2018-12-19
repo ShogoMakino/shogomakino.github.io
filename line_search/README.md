@@ -2,6 +2,7 @@ ekikara2oudia Wrapper
 
 # Update Database
 ```
-python3 get_line_data_from_ekikara.py
+./get_line_data_from_ekikara.py
 ```
+(python3 is required)
 line_data.jsが生成される
