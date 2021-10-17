@@ -1,4 +1,4 @@
-var ip = "https://192.168.10.1";
+var ip = "http://192.168.10.1";
 $(function(){
     $('#get_settings').click(function(){
 	$.post(ip + "/get_settings")
