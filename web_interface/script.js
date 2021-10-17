@@ -65,10 +65,10 @@ $(function(){
 
     $('.timer_profile .send_profile').click(function(){
 	var settings={};
-	$(this).parents('.edit').find('input[type="text"]').each(function(index, element){
+	$(this).parents('.timer_profile').find('.edit input[type="text"]').each(function(index, element){
 	    settings[$(element).attr('name')] = $(this).parents('.timer_profile').find('.view .' + $(element).attr('name')).text();
 	});
-	alert(settings)
+	alert(JSON.stringify(settings))
 	$.post(ip + '/set_settings', settings)
 	    .done().fail();
     });
