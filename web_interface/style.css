@@ -1,0 +1,28 @@
+button{
+}
+
+li{
+    width:100%;
+    border:1px;
+    background-color:#aaaaaa;
+}
+
+li input{
+    width:50%;
+}
+
+#master_profile{
+    display:none;
+}
+
+.view{
+    display:block;
+}
+
+.edit{
+    display:none;
+}
+
+.button{
+    display:none;
+}

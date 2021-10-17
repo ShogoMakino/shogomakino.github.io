@@ -1,0 +1,46 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css"></link>
+    <title>Interval Timer</title>
+  </head>
+  <body>
+    <form name="master_form">
+      <input type="button" value="Add" id="add_profile" />
+      <input type="button" value="Get" id="get_shutter" />
+      <input type="button" value="Start" id="start_shutter" />
+      <input type="button" value="Stop" id="stop_shutter" />
+      <input type="button" value="Open" id="open_shutter" />
+      <input type="button" value="Close" id="close_shutter" />
+    </form>
+    <ul>
+      <li id="master_profile" class="timer_profile">
+	<form>
+	  <div class="view">
+	    <p>枚数:<span class="interval_num"></span<</p>
+	    <p>Interval:<span class="interval_time"></span></p>
+	    <p>シャッタースピード:<span class="shutter_speed"></span></p>
+	    <p>半押し時間:<span class="half_shutter_speed"></span></p>
+	  </div>
+	  <div class="edit">
+	    <p>枚数:<input type="text" name="interval_num"></p>
+	    <p>Interval:<input type="text" name="interval_time">s</p>
+	    <p>シャッタースピード:<input type="text" name="shutter_speed">s</p>
+	    <p>半押し時間:<input type="text" name="half_shutter_speed">s</p>
+	    <p>
+	      <input type="button" value="Save" class="save_profile" />
+	      <input type="button" value="Discard" class="discard_profile" />
+	    </p>
+	  </div>
+	  <div class="button">
+	    <input type="button" value="Edit" class="edit_profile">
+	    <input type="button" value="Delete" class="delete_profile">
+	    <input type="button" value="Send" class="send_profile">
+	  </div>
+	</form>
+      </li>
+    </ul>
+  </body>
+</html>
